@@ -1,8 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-        <title>Tugas Naufal</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naufal Project</title>
+    <link rel="stylesheet" href="css/style.css">
 
+</head>
+
+<body>
+    <nav>
+        <div class="logo-icon"></div>
+
+        <section>
+            <a class="nav-item" href="#Home"><b>Home</b></a>
+            <a class="nav-item" href="#Our-Facilities"><b>Our Facilities</b></a>
+            <a class="nav-item" href="#Massage-us"><b>Massage Us</b></a>
+        </section>
+    </nav>    
+
+    <hr>
+
+    <section>
+        <!--Home-->
+        <section id="Home">
+            <Header>
+                <h1 class="Title-section">Hi, <span id="your-name"></span><br>Wellcome to Mywebsite</h1>
+            </Header>
+
+            <article> 
+                <p>Ini adalah Fun Fact Seputar Nissan GTR R35</p>
+
+                <div class="banner-container">
+                    <div class="banner-image" style="background-image: url(assets/1.jpg);"></div>
+                    <div class="banner-image" style="background-image: url(assets/2.jpg);"></div>
+                    <div class="banner-image" style="background-image: url(assets/3.jpg);"></div>
+                    <div class="banner-image" style="background-image: url(assets/4.jpg);"></div>
+                </div>
+                <button onclick="plusDivs(-1)">Previous</button>
+                <button onclick="plusDivs(1)">Next</button>
+            </article>
+        </section>
+
+        <hr>
+
+        <!--Our Facilities-->
+        <section id="Our-Facilities">
+            <header>
+                <h1 class="Title-section">Our Facilities</h1>
+            </header>
+            
+            <article class="facility-list">
+                <div>
+                    <div 
+                    style=
+                    "width: 250px; 
+                    height: 250px; 
+                    border: 1px solid black; 
+                    border-radius: 50%; 
+                    background-image: url(https://images.vexels.com/media/users/3/156239/isolated/lists/58ec9a3bea750ef53b9f00305fcc0aee-motorbike-wheel-icon.png);"></div>
+                    <h5>Wheels</h5>
+                </div>
+
+                <div>
+                    <div 
+                    style=
+                    "width: 250px; 
+                    height: 250px; 
+                    border: 1px solid black; 
+                    border-radius: 50%;
+                    background-image: url(https://images.vexels.com/media/users/3/219870/isolated/lists/74d4458b563901e7dfec95fa56a694c3-engine-motor-machine.png);"></div>
+                    <h5>Engine</h5>
+                </div>
+
+                <div>
+                    <div 
+                    style=
+                    "width: 250px; 
+                    height: 250px; 
+                    border: 1px solid black; 
+                    border-radius: 50%;
+                    background-image: url(https://images.vexels.com/media/users/3/314312/isolated/lists/38a8261f2fe6c7afa195c61ec324f638-a-car-muffler.png);"></div>
+                    <h5>Exhaust</h5>
+                </div>
+
+            </article>
+        </section>
+
+        <hr>
+
+        <!---Massage us-->
+        <section id="Massage-us">
+            <header>
+                <h1 class="Title-section">Massage US</h1>
+            </header>
+
+            <article class="Massage-Us-Section">
+                <!--form-->
+                <section>
+                <table>
+                <form name="massage-form" onsubmit="return validateform()">
+                        
+                    <tr class="form-table">
+                        <td class="label">NAMA</td>
+                        <td class="pemisah">:</td>
+                        <td><input class="box" type="text" placeholder="Nama" id="name-input" name="name-input" required></td>
+                    </tr>
+            
+                    <tr class="form-table">
+                        <td class="label">TANGGAL LAHIR</td>
+                        <td class="pemisah">:</td>
+                        <td><input class="box" type="date" id="birthd-date" name="birth-date" required></td>
+                    </tr>
+            
+                    <tr class="form-table">
+                        <td class="label">JENIS KELAMIN</td>
+                        <td class="pemisah">:</td>
+                        <td><input type="radio" id="male" name="gender" value="laki-laki" required>
+                        <label for="male">laki-laki</label>
+                        <input type="radio" id="female" name="gender" value="Perempuan">
+                        <label for="female">perempuan</label>
+                        </td>
+                    </tr>
+                    
+                    <tr class="form-table">
+                        <td class="label">PESAN</td>
+                        <td class="pemisah">:</td>
+                        <td><textarea class="box-pesan" placeholder="Ketik disini" id="massage" name="massage" required></textarea></td>
+                    </tr> 
+                    <tr>
+                        <td><button class="submit-button" id="submit" type="submit">Submit</button>
+                        </td>
+                    </tr>
+
+                </form>
+                </table>
+
+                   
+                </section>
+                
+                <!--Result-->
+                <section class="result-container">
+                    <div class="form-result">
+                        <p>Nama: <span id="user-full-name"></span></p>
+                        <p>Tanggal Lahir: <span id="user-birth-date"></span></p>
+                        <p>Jenis Kelamin: <span id="user-gender"></span></p>
+                        <p>Pesan: <span id="user-massage"></span></p>
+                    </div>
+                </section>
+
+            </article>
+
+        </section>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
